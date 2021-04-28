@@ -4,24 +4,18 @@
   </head>
   <body>
 
-
     <?php
-      $testo = "Lorem ipsum dolor sit amet, ipsum consectetur adipisicing elit, ipsum sed do eiusmod tempor incididunt.";
-
-      //var_dump($_GET['badwords']);
-
-      $bad = $_GET['badwords'];
+      $testo = "There’s that word again: ‘heavy.’ Why are things so heavy in the future? Is there a problem with the Earth’s gravitational pull?";
+      $bad = $_GET['badword'];
      ?>
 
      <p>
-       <?php echo $testoCensurato = str_replace($bad, '***', $testo); ?>
+       <?php echo $testoCensurato = str_replace($bad, '***', $testo) ?>
 
        <br>
 
-       Questo testo e' composta da <?php echo strlen($testoCensurato) ?> lettere spazi inclusi.
+       Doc's length quote: <?php echo strlen($testoCensurato) ?> letters.
      </p>
-
-
 
   </body>
 </html>
