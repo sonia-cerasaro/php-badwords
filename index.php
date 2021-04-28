@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
   </head>
   <body>
 
-
     <?php
-      $nome = "Sonia";
+      $text = "Lorem ipsum dolor sit amet, lorem consectetur adipisicing, lorem elit.";
+      // var_dump($_GET["text"]);
+      $testo = $_GET['text'];
     ?>
 
     <h1>
-      Ciao mi chiamo <?php echo $nome ?>
+      Esercizio testo con censura in PHP
     </h1>
 
-    
+    <p>
+      <?php echo $testo ?>
+    </p>
+
+    <p>
+      Questo testo e' composto da <?php echo strlen($testo) ?> lettere spazi inclusi.
+    </p>
 
   </body>
 </html>
