@@ -4,23 +4,24 @@
   </head>
   <body>
 
+
     <?php
-      $text = "Lorem ipsum dolor sit amet, lorem consectetur adipisicing, lorem elit.";
-      // var_dump($_GET["text"]);
-      $testo = $_GET['text'];
-    ?>
+      $testo = "Lorem ipsum dolor sit amet, ipsum consectetur adipisicing elit, ipsum sed do eiusmod tempor incididunt.";
 
-    <h1>
-      Esercizio testo con censura in PHP
-    </h1>
+      //var_dump($_GET['badwords']);
 
-    <p>
-      <?php echo $testo ?>
-    </p>
+      $bad = $_GET['badwords'];
+     ?>
 
-    <p>
-      Questo testo e' composto da <?php echo strlen($testo) ?> lettere spazi inclusi.
-    </p>
+     <p>
+       <?php echo $testoCensurato = str_replace($bad, '***', $testo); ?>
+
+       <br>
+
+       Questo testo e' composta da <?php echo strlen($testoCensurato) ?> lettere spazi inclusi.
+     </p>
+
+
 
   </body>
 </html>
